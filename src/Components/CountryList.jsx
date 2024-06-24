@@ -3,8 +3,10 @@ import CountryItem from "./CountryItem";
 
 import Spinner from "./Spinner";
 import Message from "./Message.jsx";
+import { useCities } from "../contexts/CitiesContext.jsx";
 
-export default function CountryList({ cities, isLoading }) {
+export default function CountryList() {
+  const { cities, isLoading } = useCities();
   if (isLoading) return <Spinner />;
 
   if (!cities.length)
