@@ -37,14 +37,15 @@
       "id": 98443197
     },
     {
-      "id": "f2a3",
-      "cityName": "Pozo Lorente",
+      "id": "7936",
+      "cityName": "Fayon",
       "country": "Spain",
       "emoji": "🇪🇸",
-      "notes": "Beautiful forests!",
+      "date": "2024-06-25T12:53:47.190Z",
+      "notes": "Great food!",
       "position": {
-        "lat": "39.05667893760689",
-        "lng": "-1.4683779008916442"
+        "lat": "41.25838520130194",
+        "lng": "0.3516320037293319"
       }
     }
   ]
