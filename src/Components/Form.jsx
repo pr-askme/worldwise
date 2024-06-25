@@ -8,6 +8,7 @@ import BackButton from "./BackButton";
 import { useUrlPosition } from "../hooks/useUrlPosition";
 import Message from "./Message";
 import Spinner from "./Spinner";
+import { useCities } from "../contexts/CitiesContext";
 
 const BASE_URL = "https://api.bigdatacloud.net/data/reverse-geocode-client";
 
@@ -20,6 +21,7 @@ export function convertToEmoji(countryCode) {
 }
 
 function Form() {
+  const { createCity } = useCities();
   const [mapLat, mapLng] = useUrlPosition();
   const [isLoadingGeoPosition, setIsLoadingGeoPosition] = useState(false);
   const [geoCodingError, setGeoCodingError] = useState("");
@@ -67,8 +69,23 @@ function Form() {
   if (!mapLat && !mapLng)
     return <Message message="Click on the map to add a city you visited" />;
 
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    if (!cityName || !date) return;
+    const newCity = {
+      cityName,
+      country,
+      emoji,
+      notes,
+      position: { mapLat, mapLng },
+    };
+
+    createCity(newCity);
+  }
+
   return (
-    <form className={styles.form}>
+    <form className={styles.form} onSubmit={handleSubmit}>
       <div className={styles.row}>
         <label htmlFor="cityName">City name</label>
         <input
