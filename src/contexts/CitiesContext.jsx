@@ -47,7 +47,7 @@ function CitiesProvider({ children }) {
         },
       });
       const data = await res.json();
-      setCurrentCity(data);
+      
     } catch {
       alert("Error in loading data");
     } finally {
