@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 import styles from "./Form.module.css";
 import Button from "./Button";
@@ -50,7 +52,7 @@ function Form() {
         } catch (err) {
           setGeoCodingError(err);
         } finally {
-          setIsLoadingGeoPosition(true);
+          setIsLoadingGeoPosition(false);
         }
       }
       fetchCityData();
@@ -79,10 +81,11 @@ function Form() {
 
       <div className={styles.row}>
         <label htmlFor="date">When did you go to {cityName}?</label>
-        <input
+        <DatePicker
           id="date"
-          onChange={(e) => setDate(e.target.value)}
-          value={date}
+          selected={date}
+          onChange={(d) => setDate(d)}
+          dateFormat="dd/MM/yyyy"
         />
       </div>
 
