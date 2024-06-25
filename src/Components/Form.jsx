@@ -29,6 +29,7 @@ function Form() {
 
   useEffect(
     function () {
+      if (!mapLat && !mapLng) return;
       async function fetchCityData() {
         try {
           setIsLoadingGeoPosition(true);
@@ -60,6 +61,9 @@ function Form() {
   if (isLoadingGeoPosition) return <Spinner />;
 
   if (geoCodingError) return <Message message={geoCodingError.message} />;
+
+  if (!mapLat && !mapLng)
+    return <Message message="Click on the map to add a city you visited" />;
 
   return (
     <form className={styles.form}>
