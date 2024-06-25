@@ -22,7 +22,7 @@ export function convertToEmoji(countryCode) {
 
 function Form() {
   const { createCity } = useCities();
-  const [mapLat, mapLng] = useUrlPosition();
+  const [lat, lng] = useUrlPosition();
   const [isLoadingGeoPosition, setIsLoadingGeoPosition] = useState(false);
   const [geoCodingError, setGeoCodingError] = useState("");
   const [cityName, setCityName] = useState("");
@@ -33,13 +33,13 @@ function Form() {
 
   useEffect(
     function () {
-      if (!mapLat && !mapLng) return;
+      if (!lat && !lng) return;
       async function fetchCityData() {
         try {
           setIsLoadingGeoPosition(true);
           setGeoCodingError("");
           const response = await fetch(
-            `${BASE_URL}?latitude=${mapLat}&longitude=${mapLng}`
+            `${BASE_URL}?latitude=${lat}&longitude=${lng}`
           );
           const data = await response.json();
 
@@ -59,14 +59,14 @@ function Form() {
       }
       fetchCityData();
     },
-    [mapLat, mapLng]
+    [lat, lng]
   );
 
   if (isLoadingGeoPosition) return <Spinner />;
 
   if (geoCodingError) return <Message message={geoCodingError.message} />;
 
-  if (!mapLat && !mapLng)
+  if (!lat && !lng)
     return <Message message="Click on the map to add a city you visited" />;
 
   function handleSubmit(e) {
@@ -78,7 +78,7 @@ function Form() {
       country,
       emoji,
       notes,
-      position: { mapLat, mapLng },
+      position: { lat, lng },
     };
 
     createCity(newCity);

@@ -37,14 +37,14 @@
       "id": 98443197
     },
     {
-      "id": "a118",
-      "cityName": "Aguilon",
+      "id": "f2a3",
+      "cityName": "Pozo Lorente",
       "country": "Spain",
       "emoji": "🇪🇸",
-      "notes": "Gorgeous rivers!",
+      "notes": "Beautiful forests!",
       "position": {
-        "mapLat": "41.30796819611657",
-        "mapLng": "-1.0106073923885674"
+        "lat": "39.05667893760689",
+        "lng": "-1.4683779008916442"
       }
     }
   ]
