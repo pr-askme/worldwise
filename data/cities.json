@@ -47,6 +47,66 @@
         "lat": "41.25838520130194",
         "lng": "0.3516320037293319"
       }
+    },
+    {
+      "id": "5a23",
+      "cityName": "Bardigues",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2024-06-25T12:59:50.755Z",
+      "notes": "Lovely People",
+      "position": {
+        "lat": "44.02310875790581",
+        "lng": "0.9084440614613555"
+      }
+    },
+    {
+      "id": "12a8",
+      "cityName": "Monserrat",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-06-25T13:02:36.969Z",
+      "notes": "Happy People",
+      "position": {
+        "lat": "39.34640718096556",
+        "lng": "-0.5711753291247225"
+      }
+    },
+    {
+      "id": "f70d",
+      "cityName": "Luesma",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-06-25T13:02:36.969Z",
+      "notes": "Happy People",
+      "position": {
+        "lat": "41.176277508956936",
+        "lng": "-1.1380802282629545"
+      }
+    },
+    {
+      "id": "9284",
+      "cityName": "Allin/Allin",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-06-25T13:04:38.066Z",
+      "notes": "Lovely music",
+      "position": {
+        "lat": "42.74448843948833",
+        "lng": "-2.0842414571171446"
+      }
+    },
+    {
+      "id": "7ac8",
+      "cityName": "Sedano",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-06-25T13:08:10.524Z",
+      "notes": "Cool breeze",
+      "position": {
+        "lat": "42.64595109540159",
+        "lng": "-3.757195742159414"
+      }
     }
   ]
 }
