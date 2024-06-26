@@ -49,15 +49,15 @@
       }
     },
     {
-      "id": "5a23",
-      "cityName": "Bardigues",
-      "country": "France",
-      "emoji": "🇫🇷",
-      "date": "2024-06-25T12:59:50.755Z",
-      "notes": "Lovely People",
+      "id": "040d",
+      "cityName": "Ouled Said",
+      "country": "Algeria",
+      "emoji": "🇩🇿",
+      "date": "2024-06-26T14:01:57.021Z",
+      "notes": "test",
       "position": {
-        "lat": "44.02310875790581",
-        "lng": "0.9084440614613555"
+        "lat": "29.37240497238327",
+        "lng": "0.20555500442092536"
       }
     }
   ]
