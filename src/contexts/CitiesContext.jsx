@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
-const BASE_URL = "http://localhost:9000";
+const BASE_URL = "/";
 const CitiesContext = createContext();
 
 function reducer(state, action) {
